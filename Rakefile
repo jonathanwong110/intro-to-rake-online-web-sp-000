@@ -26,7 +26,38 @@ namespace :db do
   end
 end
 
+<<<<<<< HEAD
+=======
+namespace :greeting do
+desc 'outputs hello to the terminal'
+  task :hello do
+    puts "hello from Rake!"
+  end
+ 
+  desc 'outputs hola to the terminal'
+  task :hola do
+    puts "hola de Rake!"
+  end
+  
+namespace :db do
+  desc 'migrate changes to your database'
+  task :migrate => :environment do
+    Student.create_table
+  end
+
+  desc 'seed the database with some dummy data'
+  task :seed do
+    require_relative './db/seeds.rb'
+  end
+end
+
+>>>>>>> 456e8a60395abea13138a52af6226851fe3f9522
   desc 'drop into the Pry console'
   task :console => :environment do
     Pry.start
   end
+<<<<<<< HEAD
+=======
+
+end
+>>>>>>> 456e8a60395abea13138a52af6226851fe3f9522
